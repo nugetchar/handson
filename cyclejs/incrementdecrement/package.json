@@ -1,0 +1,29 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@cycle/dom": "^22.3.0",
+    "@cycle/run": "^5.2.0",
+    "xstream": "^11.10.0",
+    "@babel/core": "^7.4.3"
+  },
+  "scripts": {
+    "prebrowserify": "mkdirp dist",
+    "browserify": "browserify main.js -t babelify --outfile dist/main.js",
+    "start": "yarn install && yarn browserify && echo 'OPEN index.html IN YOUR BROWSER'"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "@babel/preset-env": "^6.24.1",
+    "babel-preset-typescript": "^7.0.0-alpha.19",
+    "babel-register": "^6.26.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "mkdirp": "^0.5.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
