@@ -1,6 +1,6 @@
 import xs from 'xstream';
 import { run } from '@cycle/run';
-import { div, button, p, makeDOMDriver } from '@cycle/dom';
+import { div, button, p, span, makeDOMDriver } from '@cycle/dom';
 
 function main(sources) {
   const action$ = xs.merge(
@@ -14,7 +14,7 @@ function main(sources) {
     div([
       button('.decrement', 'Decrement'),
       button('.increment', 'Increment'),
-      p('Counter: ' + count)
+      p(['Counter: ', span('.count', count)])
     ])
   );
 

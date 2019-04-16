@@ -12,15 +12,19 @@
   "scripts": {
     "prebrowserify": "mkdirp dist",
     "browserify": "browserify main.js -t babelify --outfile dist/main.js",
-    "start": "yarn install && yarn browserify && echo 'OPEN index.html IN YOUR BROWSER'"
+    "start": "yarn install && yarn browserify && echo 'OPEN index.html IN YOUR BROWSER'",
+    "serve": "./node_modules/lite-server/bin/lite-server",
+    "cypress:open": "./node_modules/cypress/bin/cypress open"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "@babel/preset-env": "^6.24.1",
+    "babel-cli": "^6.26.0",
     "babel-preset-typescript": "^7.0.0-alpha.19",
     "babel-register": "^6.26.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
+    "cypress": "^3.2.0",
+    "lite-server": "^2.4.0",
     "mkdirp": "^0.5.1"
   },
   "keywords": [],
